@@ -1,0 +1,31 @@
+# valaxy
+fuse-list.json
+
+# vite-ssg
+.vite-ssg-dist
+.vite-ssg-temp
+node_modules
+
+temp/
+locales
+components
+layouts
+.vscode
+
+.DS_Store
+*.local
+dist
+dist-ssr
+
+.idea/
+*.log
+
+components.d.ts
+.dockerignore
+.editorconfig
+.npmrc
+Dockerfile
+Dockerfile
+netlify.toml
+netlify.toml
+pnpm-lock.yaml

@@ -1,146 +1,57 @@
-export namespace YunTheme {
-  export type Config = ThemeConfig
-  export type Sidebar = any
+import { defineSiteConfig } from 'valaxy'
+// _config.yun.yml
+export default defineSiteConfig({
+  author: {
+    avatar: 'https://pic4.zhimg.com/80/v2-03e772dccaaca9b0657e26f96df58dd9_720w.webp',
+    name: '王先生',
+  },
+  description: '直到我不爱你.',
+  social: [
+    {
+      name: 'GitHub',
+      link: 'https://github.com/ricardowangyf?tab=repositories',
+      icon: 'i-ri-github-line',
+      color: '#6e5494',
+    },
+    {
+      name: '微博',
+      link: 'https://weibo.com/u/6484697834',
+      icon: 'i-ri-weibo-line',
+      color: '#E6162D',
+    },
+    {
+      name: '网易云音乐',
+      link: 'https://music.163.com/#/user/home?id=558925982',
+      icon: 'i-ri-netease-cloud-music-line',
+      color: '#C20C0C',
+    },
+    {
+      name: '知乎',
+      link: 'https://www.zhihu.com/people/peng-yu-yan-44-15',
+      icon: 'i-ri-zhihu-line',
+      color: '#0084FF',
+    },
+    {
+      name: '哔哩哔哩',
+      link: 'https://space.bilibili.com/474868654?spm_id_from=333.1007.0.0',
+      icon: 'i-ri-bilibili-line',
+      color: '#FF8EB3',
+    },
+    {
+      name: 'Twitter',
+      link: 'https://twitter.com/Ricardowang0721',
+      icon: 'i-ri-twitter-line',
+      color: '#1da1f2',
+    },
+    {
+      name: 'E-Mail',
+      link: 'mailto:wangyufei0909@gamil.com',
+      icon: 'i-ri-mail-line',
+      color: '#8E71C1',
+    },
+  ],
 
-  export type Banner = {
-    enable: boolean
-    /**
-     * 标题
-     */
-    title: string
-
-    /**
-     * 首页下方的动态云
-     * If you want change color of cloud, please change css var `--yun-c-cloud`
-     */
-    cloud?: {
-      enable: boolean
-    }
-  }
-}
-
-/**
- * Theme Config
- */
-export interface ThemeConfig {
-  /**
-   * toc title
-   * @default 'On this page'
-   */
-  outlineTitle: string
-
-  colors: {
-    /**
-     * primary color
-     * @default '#0078E7'
-     */
-    primary: string
-  }
-
-  /**
-   * 首页标语
-   */
-  banner: YunTheme.Banner
-
-  bg_image: {
-    enable: true
-    url: `https://s1.ax1x.com/2023/01/28/pSalauD.jpg`
-    dark?: `https://s1.ax1x.com/2023/01/28/pSalauD.jpg`
-    opacity?: 0.8
-  }
-
-  /**
-   * say something
-   * https://say.elpsy.cn
-   */
-  say: {
-    enable: boolean
-    api: string
-    hitokoto: {
-      enable: boolean
-      api: string
-    }
-  }
-
-  /**
-   * 公告
-   */
-  notice: {
-    enable: boolean
-    content: string
-  }
-
-  pages: {
-    name: string
-    url: string
-    icon: string
-    color: string
-  }[]
-
-  sidebar: YunTheme.Sidebar
-
-  /**
-   * footer
-   */
-  footer: Partial<{
-    /**
-     * 建站于
-     */
-    since: number
-
-    /**
-     * Icon between year and copyright info.
-     */
-    icon: {
-      /**
-       * icon name, i-xxx
-       */
-      enable: boolean
-      name: string
-      animated: boolean
-      color: string
-      url: string
-      title: string
-    }
-
-    /**
-     * Powered by valaxy & valaxy-theme-${name}, default is yun
-     */
-    powered: boolean
-
-    /**
-     * Chinese Users | 中国用户
-     * 备案 ICP
-     * 国内用户需要在网站页脚展示备案 ICP 号
-     * https://beian.miit.gov.cn/
-     */
-    beian: {
-      enable: boolean
-      /**
-       * 苏ICP备xxxxxxxx号
-       */
-      icp: string
-    }
-  }>
-
-  /**
-   * post card types
-   */
-  types: Record<string, {
-    color: string
-    icon: string
-  }>
-
-  /**
-   * 菜单栏
-   */
-  menu: {
-    custom: {
-      title: string
-      url: string
-      icon: string
-    }
-  }
-}
-
-export type UserThemeConfig = Partial<ThemeConfig>
+  search: {
+    enable: false,
+  },
+})
